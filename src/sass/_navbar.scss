@@ -1,0 +1,16 @@
+.navbar {
+  &__nav {
+    &__ul {
+      display: flex;
+      justify-content: right;
+      list-style: none;
+      margin-right: 10rem;
+      gap: 5rem;
+      &__li {
+        &__a {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
