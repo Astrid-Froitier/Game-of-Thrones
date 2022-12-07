@@ -1,7 +1,12 @@
 .home {
-  &__title {
+  display: flex;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+  &__characters,
+  &__houses {
+    padding: 0;
+    list-style: none;
     font-family: 'mainPolice';
-    font-size: 3.5rem;
-    font-weight: bold;
   }
 }
