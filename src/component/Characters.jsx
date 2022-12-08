@@ -2,7 +2,7 @@ import React from 'react';
 
 import CharactersCards from './CharactersCards';
 
-function Families() {
+function Characters() {
   return (
     <div className="characters">
       <div className="characters__title">
@@ -13,4 +13,4 @@ function Families() {
   );
 }
 
-export default Families;
+export default Characters;

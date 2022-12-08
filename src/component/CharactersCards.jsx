@@ -1,21 +1,18 @@
 import { useEffect, useState } from 'react';
+// import CharacterProfile from './CharacterProfile';
+import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function CharactersCards() {
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [characters, setCharacters] = useState({});
+  const [characters, setCharacters] = useState();
 
-  const getCharacters = () => {
+  useEffect(() => {
     axios
       .get(`https://anapioficeandfire.com/api/characters`)
       .then((res) => res.data)
       .then((data) => setCharacters(data))
       // eslint-disable-next-line no-console
       .catch((err) => console.log(err));
-  };
-
-  useEffect(() => {
-    getCharacters();
   }, []);
 
   return (
@@ -30,6 +27,7 @@ function CharactersCards() {
               <p>titre : {character.titles}</p>
               <p>actor : {character.playedBy}</p>
               <p>first house : {character.allegiances}</p>
+              <Link to="/Profile">profile</Link>
             </div>
           ))}
     </div>
