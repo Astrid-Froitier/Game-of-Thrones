@@ -1,9 +1,9 @@
 import { HashRouter, Route, Routes } from 'react-router-dom';
 
-import CharacterProfile from './component/CharacterProfile';
-import Characters from './component/Characters';
+import CharacterDesc from './component/CharacterDesc';
+import CharactersList from './component/CharactersList';
 import Home from './component/Home';
-import Houses from './component/Houses';
+import HousesList from './component/HousesList';
 
 import './App.scss';
 function App() {
@@ -12,9 +12,9 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/characters" element={<Characters />} />
-          <Route path="/houses" element={<Houses />} />
-          <Route path="/profile" element={<CharacterProfile />} />
+          <Route path="/characters" element={<CharactersList />} />
+          <Route path="/houses" element={<HousesList />} />
+          <Route path="/characters/:id" element={<CharacterDesc />} />
         </Routes>
       </HashRouter>
     </div>

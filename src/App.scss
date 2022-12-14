@@ -2,6 +2,8 @@
 @import 'sass/abstract';
 @import 'sass/typography';
 @import 'sass/_home.scss';
-@import 'sass/_characters';
-@import 'sass/_houses';
 @import 'sass/navbar';
+@import 'sass/charactersList';
+@import 'sass/housesList';
+@import 'sass/_characterDesc.sass';
+@import 'sass/characterCard';

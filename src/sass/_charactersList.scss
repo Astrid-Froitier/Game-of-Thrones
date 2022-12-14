@@ -1,0 +1,15 @@
+.charactersList {
+  font-family: 'mainPolice';
+
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 10rem;
+  }
+  &__map {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1em;
+    justify-items: center;
+  }
+}
