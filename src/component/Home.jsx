@@ -5,10 +5,14 @@ function Home() {
   return (
     <div className="home">
       <div className="home__characters">
-        <NavLink to="/characters">Characters</NavLink>
+        <NavLink to="/characters" className="home__characters__link">
+          Characters
+        </NavLink>
       </div>
       <div className="home__houses">
-        <NavLink to="/houses">Houses</NavLink>
+        <NavLink to="/houses" className="home__houses__link">
+          Houses
+        </NavLink>
       </div>
     </div>
   );

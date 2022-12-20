@@ -2,11 +2,19 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import HouseCard from './HouseCard';
+import HousesSearch from './HousesSearch';
 
 function HousesList() {
   const [houses, setHouses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState('');
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const houseAsc = houses.sort();
 
   const getFounder = async (house) => {
     if (house.founder !== null) {
@@ -65,15 +73,16 @@ function HousesList() {
   return (
     <div className="housesList">
       <h1 className="housesList__title">All houses</h1>
+      <HousesSearch house={houses} search={search} handleSearch={handleSearch} />
       <div className="housesList__map">
-        {houses &&
-          houses
+        {houseAsc &&
+          houseAsc
             .filter((house) => house.currentLord !== undefined)
             .map((house, index) => {
               const id = house.url.split('/').pop() ?? null;
               return (
                 <div className="housesList__map__details" key={index}>
-                  <HouseCard house={{ ...house, id }} />
+                  {<HouseCard house={{ ...house, id }} />}
                 </div>
               );
             })}

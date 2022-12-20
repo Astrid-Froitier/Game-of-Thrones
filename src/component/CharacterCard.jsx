@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 function CharacterCard({ character }) {
   return (
-    <Link className="characterCard" to={`/characters/${character.id}`}>
-      <h2 className="characterCard__name">{character.name}</h2>
+    <Link to={`/characters/${character.id}`} className="characterCard">
+      <h2 className="characterCard__title">{character.name}</h2>
       <p className="characterCard__culture">
         {character.culture === null ? null : character.culture}
       </p>

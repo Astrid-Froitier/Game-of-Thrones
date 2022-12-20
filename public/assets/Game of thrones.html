@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<!-- saved from url=(0034)http://localhost:3001/#/characters -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3001/assets/armchair.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3001/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3001/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Game of thrones</title>
+  <script defer="" src="./Game of thrones_files/bundle.js"></script><style>@font-face {
+  font-family: "mainPolice";
+  src: url(http://localhost:3001/static/media/Game-of-Thrones.71fa190a8a1a34123fa1.ttf);
+}
+.home {
+  background: center/contain no-repeat url(http://localhost:3001/static/media/GOT.dac1ff1363b2aec20441.jpeg);
+  display: flex;
+  background-color: #000;
+  justify-content: space-around;
+  height: 100vh;
+  align-items: center;
+}
+.home__characters, .home__houses {
+  padding: 0;
+  font-size: 2.5rem;
+  list-style: none;
+  font-family: "mainPolice";
+}
+.home__characters__link, .home__houses__link {
+  color: #fff;
+}
+
+.charactersList {
+  font-family: "mainPolice";
+}
+.charactersList__title {
+  display: flex;
+  justify-content: center;
+  margin: 10rem;
+}
+.charactersList__map {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  justify-items: center;
+}
+
+.housesList {
+  background-color: #000;
+  font-family: "mainPolice";
+}
+.housesList__title {
+  display: flex;
+  justify-content: center;
+  padding: 10rem;
+  color: #fff;
+}
+.housesList__map {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1em;
+  justify-items: center;
+}
+.housesList__map__details {
+  height: 15rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  border: #fff solid 1px;
+  border-radius: 10%;
+  align-items: center;
+  padding: 20px;
+  text-decoration: none;
+}
+
+.characterCard {
+  height: 15rem;
+  width: 20rem;
+  display: flex;
+  flex-direction: column;
+  border: black solid 1px;
+  border-radius: 10%;
+  align-items: center;
+  padding: 20px;
+  text-decoration: none;
+}
+.characterCard__title {
+  text-decoration: none;
+  color: #fff;
+}
+
+.houseCard__title {
+  color: #fff;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9zYXNzL190eXBvZ3JhcGh5LnNjc3MiLCJ3ZWJwYWNrOi8vLi9zcmMvQXBwLnNjc3MiLCJ3ZWJwYWNrOi8vLi9zcmMvc2Fzcy9faG9tZS5zY3NzIiwid2VicGFjazovLy4vc3JjL3Nhc3MvX2NoYXJhY3RlcnNMaXN0LnNjc3MiLCJ3ZWJwYWNrOi8vLi9zcmMvc2Fzcy9faG91c2VzTGlzdC5zY3NzIiwid2VicGFjazovLy4vc3JjL3Nhc3MvX2NoYXJhY3RlckNhcmQuc2NzcyIsIndlYnBhY2s6Ly8uL3NyYy9zYXNzL19ob3VzZUNhcmQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTtFQUNFLHlCQUFBO0VBQ0EsNENBQUE7QUNDRjtBQ0hBO0VBQ0UsNEVBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSw2QkFBQTtFQUNBLGFBQUE7RUFDQSxtQkFBQTtBREtGO0FDSkU7RUFFRSxVQUFBO0VBQ0EsaUJBQUE7RUFDQSxnQkFBQTtFQUNBLHlCQUFBO0FES0o7QUNKSTtFQUNFLFdBQUE7QURNTjs7QUVwQkE7RUFDRSx5QkFBQTtBRnVCRjtBRXJCRTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGFBQUE7QUZ1Qko7QUVyQkU7RUFDRSxhQUFBO0VBQ0Esa0NBQUE7RUFDQSxRQUFBO0VBQ0EscUJBQUE7QUZ1Qko7O0FHbkNBO0VBQ0Usc0JBQUE7RUFDQSx5QkFBQTtBSHNDRjtBR3BDRTtFQUNFLGFBQUE7RUFDQSx1QkFBQTtFQUNBLGNBQUE7RUFDQSxXQUFBO0FIc0NKO0FHcENFO0VBQ0UsYUFBQTtFQUNBLGtDQUFBO0VBQ0EsUUFBQTtFQUNBLHFCQUFBO0FIc0NKO0FHckNJO0VBQ0UsYUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSxzQkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBQ0EscUJBQUE7QUh1Q047O0FJL0RBO0VBQ0UsYUFBQTtFQUNBLFlBQUE7RUFDQSxhQUFBO0VBQ0Esc0JBQUE7RUFDQSx1QkFBQTtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7RUFDQSxhQUFBO0VBQ0EscUJBQUE7QUprRUY7QUlqRUU7RUFDRSxxQkFBQTtFQUNBLFdBQUE7QUptRUo7O0FLOUVFO0VBQ0UsV0FBQTtBTGlGSiIsInNvdXJjZXNDb250ZW50IjpbIkBmb250LWZhY2Uge1xuICBmb250LWZhbWlseTogJ21haW5Qb2xpY2UnO1xuICBzcmM6IHVybCguL0dhbWUtb2YtVGhyb25lcy50dGYpO1xufVxuIiwiQGZvbnQtZmFjZSB7XG4gIGZvbnQtZmFtaWx5OiBcIm1haW5Qb2xpY2VcIjtcbiAgc3JjOiB1cmwoLi9HYW1lLW9mLVRocm9uZXMudHRmKTtcbn1cbi5ob21lIHtcbiAgYmFja2dyb3VuZDogY2VudGVyL2NvbnRhaW4gbm8tcmVwZWF0IHVybChcIi4uLy4uL3B1YmxpYy9hc3NldHMvR09ULmpwZWdcIik7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG4gIGp1c3RpZnktY29udGVudDogc3BhY2UtYXJvdW5kO1xuICBoZWlnaHQ6IDEwMHZoO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xufVxuLmhvbWVfX2NoYXJhY3RlcnMsIC5ob21lX19ob3VzZXMge1xuICBwYWRkaW5nOiAwO1xuICBmb250LXNpemU6IDIuNXJlbTtcbiAgbGlzdC1zdHlsZTogbm9uZTtcbiAgZm9udC1mYW1pbHk6IFwibWFpblBvbGljZVwiO1xufVxuLmhvbWVfX2NoYXJhY3RlcnNfX2xpbmssIC5ob21lX19ob3VzZXNfX2xpbmsge1xuICBjb2xvcjogI2ZmZjtcbn1cblxuLmNoYXJhY3RlcnNMaXN0IHtcbiAgZm9udC1mYW1pbHk6IFwibWFpblBvbGljZVwiO1xufVxuLmNoYXJhY3RlcnNMaXN0X190aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBtYXJnaW46IDEwcmVtO1xufVxuLmNoYXJhY3RlcnNMaXN0X19tYXAge1xuICBkaXNwbGF5OiBncmlkO1xuICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnIgMWZyO1xuICBnYXA6IDFlbTtcbiAganVzdGlmeS1pdGVtczogY2VudGVyO1xufVxuXG4uaG91c2VzTGlzdCB7XG4gIGJhY2tncm91bmQtY29sb3I6ICMwMDA7XG4gIGZvbnQtZmFtaWx5OiBcIm1haW5Qb2xpY2VcIjtcbn1cbi5ob3VzZXNMaXN0X190aXRsZSB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICBwYWRkaW5nOiAxMHJlbTtcbiAgY29sb3I6ICNmZmY7XG59XG4uaG91c2VzTGlzdF9fbWFwIHtcbiAgZGlzcGxheTogZ3JpZDtcbiAgZ3JpZC10ZW1wbGF0ZS1jb2x1bW5zOiAxZnIgMWZyIDFmcjtcbiAgZ2FwOiAxZW07XG4gIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbn1cbi5ob3VzZXNMaXN0X19tYXBfX2RldGFpbHMge1xuICBoZWlnaHQ6IDE1cmVtO1xuICB3aWR0aDogMjByZW07XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGJvcmRlcjogI2ZmZiBzb2xpZCAxcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwJTtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMjBweDtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuXG4uY2hhcmFjdGVyQ2FyZCB7XG4gIGhlaWdodDogMTVyZW07XG4gIHdpZHRoOiAyMHJlbTtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgYm9yZGVyOiBibGFjayBzb2xpZCAxcHg7XG4gIGJvcmRlci1yYWRpdXM6IDEwJTtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgcGFkZGluZzogMjBweDtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xufVxuLmNoYXJhY3RlckNhcmRfX3RpdGxlIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lO1xuICBjb2xvcjogI2ZmZjtcbn1cblxuLmhvdXNlQ2FyZF9fdGl0bGUge1xuICBjb2xvcjogI2ZmZjtcbn0iLCIuaG9tZSB7XG4gIGJhY2tncm91bmQ6IGNlbnRlciAvIGNvbnRhaW4gbm8tcmVwZWF0IHVybCgnLi4vLi4vcHVibGljL2Fzc2V0cy9HT1QuanBlZycpO1xuICBkaXNwbGF5OiBmbGV4O1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwO1xuICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWFyb3VuZDtcbiAgaGVpZ2h0OiAxMDB2aDtcbiAgYWxpZ24taXRlbXM6IGNlbnRlcjtcbiAgJl9fY2hhcmFjdGVycyxcbiAgJl9faG91c2VzIHtcbiAgICBwYWRkaW5nOiAwO1xuICAgIGZvbnQtc2l6ZTogMi41cmVtO1xuICAgIGxpc3Qtc3R5bGU6IG5vbmU7XG4gICAgZm9udC1mYW1pbHk6ICdtYWluUG9saWNlJztcbiAgICAmX19saW5rIHtcbiAgICAgIGNvbG9yOiAjZmZmO1xuICAgIH1cbiAgfVxufVxuIiwiLmNoYXJhY3RlcnNMaXN0IHtcbiAgZm9udC1mYW1pbHk6ICdtYWluUG9saWNlJztcblxuICAmX190aXRsZSB7XG4gICAgZGlzcGxheTogZmxleDtcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IGNlbnRlcjtcbiAgICBtYXJnaW46IDEwcmVtO1xuICB9XG4gICZfX21hcCB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnIgMWZyO1xuICAgIGdhcDogMWVtO1xuICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbiAgfVxufVxuIiwiLmhvdXNlc0xpc3Qge1xuICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDAwO1xuICBmb250LWZhbWlseTogJ21haW5Qb2xpY2UnO1xuXG4gICZfX3RpdGxlIHtcbiAgICBkaXNwbGF5OiBmbGV4O1xuICAgIGp1c3RpZnktY29udGVudDogY2VudGVyO1xuICAgIHBhZGRpbmc6IDEwcmVtO1xuICAgIGNvbG9yOiAjZmZmO1xuICB9XG4gICZfX21hcCB7XG4gICAgZGlzcGxheTogZ3JpZDtcbiAgICBncmlkLXRlbXBsYXRlLWNvbHVtbnM6IDFmciAxZnIgMWZyO1xuICAgIGdhcDogMWVtO1xuICAgIGp1c3RpZnktaXRlbXM6IGNlbnRlcjtcbiAgICAmX19kZXRhaWxzIHtcbiAgICAgIGhlaWdodDogMTVyZW07XG4gICAgICB3aWR0aDogMjByZW07XG4gICAgICBkaXNwbGF5OiBmbGV4O1xuICAgICAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgICAgIGJvcmRlcjogI2ZmZiBzb2xpZCAxcHg7XG4gICAgICBib3JkZXItcmFkaXVzOiAxMCU7XG4gICAgICBhbGlnbi1pdGVtczogY2VudGVyO1xuICAgICAgcGFkZGluZzogMjBweDtcbiAgICAgIHRleHQtZGVjb3JhdGlvbjogbm9uZTtcbiAgICB9XG4gIH1cbn1cbiIsIi5jaGFyYWN0ZXJDYXJkIHtcbiAgaGVpZ2h0OiAxNXJlbTtcbiAgd2lkdGg6IDIwcmVtO1xuICBkaXNwbGF5OiBmbGV4O1xuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xuICBib3JkZXI6IGJsYWNrIHNvbGlkIDFweDtcbiAgYm9yZGVyLXJhZGl1czogMTAlO1xuICBhbGlnbi1pdGVtczogY2VudGVyO1xuICBwYWRkaW5nOiAyMHB4O1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICZfX3RpdGxlIHtcbiAgICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cbiIsIi5ob3VzZUNhcmQge1xuICAmX190aXRsZSB7XG4gICAgY29sb3I6ICNmZmY7XG4gIH1cbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu',
+    'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7d0VBQ3NFO0VBQ3RFLG1DQUFtQztFQUNuQyxrQ0FBa0M7QUFDcEM7O0FBRUE7RUFDRSwrRUFBK0U7QUFDakYiLCJzb3VyY2VzQ29udGVudCI6WyJib2R5IHtcbiAgbWFyZ2luOiAwO1xuICBmb250LWZhbWlseTogLWFwcGxlLXN5c3RlbSwgQmxpbmtNYWNTeXN0ZW1Gb250LCAnU2Vnb2UgVUknLCAnUm9ib3RvJywgJ094eWdlbicsICdVYnVudHUnLFxuICAgICdDYW50YXJlbGwnLCAnRmlyYSBTYW5zJywgJ0Ryb2lkIFNhbnMnLCAnSGVsdmV0aWNhIE5ldWUnLCBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLCBtb25vc3BhY2U7XG59XG4iXSwic291cmNlUm9vdCI6IiJ9 */</style></head>
+  <body cz-shortcut-listen="true">
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><div class="App"><div class="charactersList"><h1 class="charactersList__title">All characters</h1><div class="charactersList__map"><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/2"><h2 class="characterCard__title">Walder</h2><p class="characterCard__culture"></p><p class="characterCard__titles"></p><p class="characterCard__aliases"> Hodor</p><p class="characterCard__playedBy">Kristian Nairn</p><p>House Stark of Winterfell</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/12"><h2 class="characterCard__title">Balon Greyjoy</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Iron King</p><p class="characterCard__aliases"> Balon the Brave</p><p class="characterCard__playedBy">Patrick Malahide</p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/13"><h2 class="characterCard__title">Chayle</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septon</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/14"><h2 class="characterCard__title">Gillam</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Brother</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/15"><h2 class="characterCard__title">High Septon</h2><p class="characterCard__culture"></p><p class="characterCard__titles">High Septon</p><p class="characterCard__aliases"> The High Sparrow</p><p class="characterCard__playedBy">Jonathan Pryce</p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/16"><h2 class="characterCard__title">Margaery Tyrell</h2><p class="characterCard__culture">Westeros</p><p class="characterCard__titles">Queen of the Seven Kingdoms</p><p class="characterCard__aliases"> The Little Queen</p><p class="characterCard__playedBy">Natalie Dormer</p><p>House Tyrell of Highgarden</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/17"><h2 class="characterCard__title">Melicent</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septa</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/18"><h2 class="characterCard__title">Meribald</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septon</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/19"><h2 class="characterCard__title">Moelle</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septa</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/20"><h2 class="characterCard__title">Mordane</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septa</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy">Susan Brown</p><p>House Stark of Winterfell</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/21"><h2 class="characterCard__title">Nysterica</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septa</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/22"><h2 class="characterCard__title">Ollidor</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septon</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/23"><h2 class="characterCard__title">Osmynd</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septon</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/24"><h2 class="characterCard__title">Raynard</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septon</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/25"><h2 class="characterCard__title">Scolera</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septa</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/26"><h2 class="characterCard__title">Torbert</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septon</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/27"><h2 class="characterCard__title">Tywin Lannister</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Lord of Casterly Rock</p><p class="characterCard__aliases"> The Lion of Lannister</p><p class="characterCard__playedBy">Charles Dance</p><p>House Lannister of Casterly Rock</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/28"><h2 class="characterCard__title">Unella</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Septa</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy">Hannah Waddingham</p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/29"><h2 class="characterCard__title">Abelar Hightower</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Ser</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Hightower of the Hightower</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/30"><h2 class="characterCard__title">Addam Frey</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Ser</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Frey of the Crossing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/31"><h2 class="characterCard__title">Addam Marbrand</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Ser</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy">B.J. Hogg</p><p>House Marbrand of Ashemark</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/32"><h2 class="characterCard__title">Addam Osgrey</h2><p class="characterCard__culture"></p><p class="characterCard__titles"></p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Osgrey of Standfast</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/33"><h2 class="characterCard__title">Addam Velaryon</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles">Ser</p><p class="characterCard__aliases"> Addam of Hull</p><p class="characterCard__playedBy"></p><p>House Targaryen of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/34"><h2 class="characterCard__title">Addison Hill</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Ser</p><p class="characterCard__aliases"> The Bastard of Cornfield</p><p class="characterCard__playedBy"></p><p>House Swyft of Cornfield</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/35"><h2 class="characterCard__title">Aegon Blackfyre</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles"></p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Blackfyre of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/36"><h2 class="characterCard__title">Aegon Frey</h2><p class="characterCard__culture"></p><p class="characterCard__titles"></p><p class="characterCard__aliases"> Jinglebell</p><p class="characterCard__playedBy"></p><p>House Frey of the Crossing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/37"><h2 class="characterCard__title">Aegon Frey</h2><p class="characterCard__culture"></p><p class="characterCard__titles"></p><p class="characterCard__aliases"> Aegon Bloodborn</p><p class="characterCard__playedBy"></p><p>House Frey of the Crossing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/38"><h2 class="characterCard__title">Aegon I</h2><p class="characterCard__culture"></p><p class="characterCard__titles">King of All Westeros</p><p class="characterCard__aliases"> Aegon the Conqueror</p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/39"><h2 class="characterCard__title">Aegon II</h2><p class="characterCard__culture"></p><p class="characterCard__titles">King of the Andals, the Rhoynar and the First Men</p><p class="characterCard__aliases"> Aegon the Elder</p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/40"><h2 class="characterCard__title">Aegon III</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles">King of the Andals, the Rhoynar and the First Men</p><p class="characterCard__aliases"> Aegon the Younger</p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/41"><h2 class="characterCard__title">Aegon IV</h2><p class="characterCard__culture"></p><p class="characterCard__titles">King of the Andals, the Rhoynar and the First Men</p><p class="characterCard__aliases"> Aegon the Unworthy</p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/42"><h2 class="characterCard__title">Aegon Targaryen</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles"></p><p class="characterCard__aliases"> Young Griff</p><p class="characterCard__playedBy"></p><p>House Targaryen of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/43"><h2 class="characterCard__title">Aegon Targaryen</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles">Prince</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Targaryen of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/44"><h2 class="characterCard__title">Aegon Targaryen</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles">Prince</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Targaryen of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/45"><h2 class="characterCard__title">Aegon Targaryen</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles">Prince</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Targaryen of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/46"><h2 class="characterCard__title">Aegon V</h2><p class="characterCard__culture"></p><p class="characterCard__titles">King of the Andals, the Rhoynar and the First Men</p><p class="characterCard__aliases"> Aegon the Unlikely</p><p class="characterCard__playedBy"></p><p></p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/47"><h2 class="characterCard__title">Aegor Rivers</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Ser</p><p class="characterCard__aliases"> Bittersteel</p><p class="characterCard__playedBy"></p><p>House Blackfyre of King's Landing</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/48"><h2 class="characterCard__title">Aelinor Penrose</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles">Queen</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Penrose of Parchments</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/49"><h2 class="characterCard__title">Aemma Arryn</h2><p class="characterCard__culture"></p><p class="characterCard__titles">Queen</p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Arryn of the Eyrie</p></a></div></div><div class="charactersList__map__details"><div class="characterCard"><a href="http://localhost:3001/#/characters/50"><h2 class="characterCard__title">Aemon Blackfyre</h2><p class="characterCard__culture">Valyrian</p><p class="characterCard__titles"></p><p class="characterCard__aliases"> </p><p class="characterCard__playedBy"></p><p>House Blackfyre of King's Landing</p></a></div></div></div><button>See more</button></div></div></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+</body></html>

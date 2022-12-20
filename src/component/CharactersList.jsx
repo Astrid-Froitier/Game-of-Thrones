@@ -2,10 +2,18 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 
 import CharacterCard from './CharacterCard';
+import CharactersSearch from './CharactersSearch';
 
 function CharactersList() {
   const [characters, setCharacters] = useState([]);
   const [page, setPage] = useState(1);
+  const [search, setSearch] = useState('');
+
+  const handleSearch = (e) => {
+    setSearch(e.target.value);
+  };
+
+  const charactersAsc = characters.sort();
 
   const getHouse = async (character) => {
     if (character.allegiances.length > 0) {
@@ -49,14 +57,15 @@ function CharactersList() {
   return (
     <div className="charactersList">
       <h1 className="charactersList__title">All characters</h1>
+      <CharactersSearch search={search} handleSearch={handleSearch} />
       <div className="charactersList__map">
-        {characters &&
-          characters
+        {charactersAsc &&
+          charactersAsc
             .filter((character) => character.name !== '')
             .map((character) => {
               const id = character.url.split('/').pop() ?? null;
               return (
-                <div key={character.url}>
+                <div className="charactersList__map__details" key={character.url}>
                   <CharacterCard character={{ ...character, id }} />
                 </div>
               );

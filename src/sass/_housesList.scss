@@ -1,10 +1,12 @@
 .housesList {
+  background: url('../../public/assets/wallpaper.jpeg');
   font-family: 'mainPolice';
 
   &__title {
     display: flex;
     justify-content: center;
-    margin: 10rem;
+    padding: 10rem;
+    color: #fff;
   }
   &__map {
     display: grid;
@@ -16,15 +18,11 @@
       width: 20rem;
       display: flex;
       flex-direction: column;
-      border: black solid 1px;
+      border: #fff solid 1px;
       border-radius: 10%;
       align-items: center;
       padding: 20px;
       text-decoration: none;
-      color: #000;
-      &__title {
-        text-align: center;
-      }
     }
   }
 }

@@ -1,0 +1,17 @@
+.characterDesc {
+  padding: 1.5rem;
+  height: 100vh;
+  background-image: url('../../public/assets/wallpaper.jpeg');
+  background-size: cover;
+  color: #fff;
+  &__title {
+    font-family: 'mainPolice';
+  }
+  &__details {
+    &__link {
+      &__character {
+        text-decoration: none;
+      }
+    }
+  }
+}

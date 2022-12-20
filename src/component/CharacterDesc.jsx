@@ -21,20 +21,6 @@ function CharacterDesc() {
     return { name: 'none', id: null };
   };
 
-  // display names for characters
-  const getHouse = async (url) => {
-    if (url) {
-      const house = await axios.get(url.allegiances);
-      return house.data.name;
-    }
-    return null;
-  };
-
-  // const inflateHouse = async (character) => {
-  //   const inflatedHouse = await getHouse(character);
-  //   return inflatedHouse;
-  // };
-
   // // display spouse's name
   // const getSpouse = async (character) => {
   //   if (character.spouse !== null) {
@@ -85,13 +71,13 @@ function CharacterDesc() {
       // const father = await inflateFather(response.data);
       // const mother = await inflateMother(response.data);
       const characterDetail = response.data;
-      const house = await getHouse(characterDetail);
+      // const house = await getHouse(characterDetail);
       characterDetail.spouseDetail = await getDetails(characterDetail.spouse);
       characterDetail.fatherDetail = await getDetails(characterDetail.father);
       characterDetail.motherDetail = await getDetails(characterDetail.mother);
-      characterDetail.houseDetail = await getDetails(characterDetail.house);
+      characterDetail.houseDetail = await getDetails(characterDetail.allegiances[0]);
 
-      setCharacter({ ...characterDetail, house });
+      setCharacter({ ...characterDetail });
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
@@ -108,49 +94,74 @@ function CharacterDesc() {
   }
 
   return (
-    <div className="Characters">
-      <h1>{character.name}</h1>
-      {/* <div key={id}> */}
-      <p>{character.playedBy}</p>
-      <p>{character.gender}</p>
-      <p>{character.culture}</p>
-      <p>title : {character.titles}</p>
-      <p>alias : {character.aliases}</p>
-      <p>season : {character.tvSeries} </p>
-      <p>born : {character.born}</p>
-      <p>died : {character.died}</p>
-      father :
-      {character.fatherDetail?.id ? (
-        <Link to={`/characters/${character.fatherDetail?.id}`}>
-          {character.fatherDetail?.name}{' '}
-        </Link>
-      ) : (
-        'unknown'
-      )}
-      <br />
-      mother :
-      {character.motherDetail?.id ? (
-        <Link to={`/characters/${character.motherDetail?.id}`}>{character.motherDetail?.name}</Link>
-      ) : (
-        'unknown'
-      )}
-      <br />
-      husband :
-      {character.spouseDetail?.id ? (
-        <Link to={`/characters/${character.spouseDetail?.id}`}>{character.spouseDetail?.name}</Link>
-      ) : (
-        'unknown'
-      )}
-      <br />
-      houses :
-      {character.houseDetail?.id ? (
-        <Link to={`/houses/${character.houseDetail?.id}`}>{character.houseDetail.name}</Link>
-      ) : (
-        'unknown'
-      )}
-      {/* eslint-disable-next-line no-console */}
-      {console.log(character.houseDetail.id)}
-      <p>{character.house}</p>
+    <div className="characterDesc">
+      <h1 className="characterDesc__title">{character.name}</h1>
+      <div className="characterDesc__details">
+        <p>{character.playedBy}</p>
+        <p>{character.gender}</p>
+        <p>{character.culture}</p>
+        <p>title : {character.titles}</p>
+        <p>alias : {character.aliases}</p>
+        <p>
+          season :
+          {character.tvSeries &&
+            character.tvSeries.map((alias, index) => <p key={index}>{alias}</p>)}
+        </p>
+        <p>born : {character.born}</p>
+        <p>died : {character.died}</p>
+        <p className="characterDesc__details__link">
+          father :
+          {character.fatherDetail?.id ? (
+            <Link
+              className="characterDesc__details__link__character"
+              to={`/characters/${character.fatherDetail?.id}`}
+            >
+              {character.fatherDetail?.name}{' '}
+            </Link>
+          ) : (
+            'unknown'
+          )}
+        </p>
+        <p className="characterDesc__details__link">
+          mother :
+          {character.motherDetail?.id ? (
+            <Link
+              className="characterDesc__details__link__character"
+              to={`/characters/${character.motherDetail?.id}`}
+            >
+              {character.motherDetail?.name}
+            </Link>
+          ) : (
+            'unknown'
+          )}
+        </p>
+        <p className="characterDesc__details__link">
+          husband :
+          {character.spouseDetail?.id ? (
+            <Link
+              className="characterDesc__details__link__character"
+              to={`/characters/${character.spouseDetail?.id}`}
+            >
+              {character.spouseDetail?.name}
+            </Link>
+          ) : (
+            'unknown'
+          )}
+        </p>
+        <p className="characterDesc__details__link">
+          houses :
+          {character.houseDetail?.id ? (
+            <Link
+              className="characterDesc__details__link__character"
+              to={`/houses/${character.houseDetail?.id}`}
+            >
+              {character.houseDetail.name}
+            </Link>
+          ) : (
+            'unknown'
+          )}
+        </p>
+      </div>
     </div>
   );
 }

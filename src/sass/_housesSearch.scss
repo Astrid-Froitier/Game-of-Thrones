@@ -1,0 +1,12 @@
+.housesSearch {
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 50px;
+  align-items: center;
+  margin-left: 20px;
+  &__input {
+    height: 20px;
+    margin-left: 20px;
+  }
+}

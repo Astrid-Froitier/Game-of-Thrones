@@ -46,10 +46,12 @@ function HouseDesc() {
   return (
     <div>
       <h1>{house.name}</h1>
-      <Link> Founder : {house.founderDetails?.name}</Link>
-      <Link> Current Lord : {house.currentLordDetails?.name}</Link>
+      Founder : {house.founderDetail?.id ? <Link>{house.founderDetails?.name}</Link> : 'unknown'}
+      Current Lord :
+      {house.currentLordDetail?.id ? <Link>{house.currentLordDetails?.name}</Link> : 'unknown'}
       <div>words : {house.words}</div>
       <div>coat of arms : {house.coatOfArms}</div>
+      <div>Founded in : {house.founded}</div>
     </div>
   );
 }
