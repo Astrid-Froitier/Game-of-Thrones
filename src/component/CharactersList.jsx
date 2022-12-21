@@ -17,8 +17,12 @@ function CharactersList() {
   const charactersAsc = characters.sort();
 
   const getHouse = async (character) => {
+    // eslint-disable-next-line no-console
+    console.log('character', character);
     if (character.allegiances.length > 0) {
       const house = await axios.get(character.allegiances[0]);
+      // eslint-disable-next-line no-console
+      console.log('house data', house.data);
       return house.data.name;
     }
     return null;
@@ -40,7 +44,6 @@ function CharactersList() {
       const response = await axios.get(
         `https://anapioficeandfire.com/api/characters?pageSize=200&page=${page}`,
       );
-      // const characters = response.data;
       const inflatedCharacters = await infalteHouse(response.data);
       setCharacters([...characters, ...inflatedCharacters]);
     } catch (error) {

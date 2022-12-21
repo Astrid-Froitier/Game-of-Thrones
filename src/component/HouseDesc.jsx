@@ -1,31 +1,44 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
+
+import HouseContext from '../context/Housecontext';
+import { getDetails } from '../utils/functions';
 
 function HouseDesc() {
   const params = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [house, setHouse] = useState({});
 
-  const getId = (url) => {
-    const id = url.split('/').pop() ?? null;
-    return id;
-  };
+  const { houses } = useContext(HouseContext);
 
-  const getDetails = async (url) => {
-    if (url) {
-      const res = await axios.get(url);
-      return { name: res.data.name, id: getId(url) };
-    }
-    return { name: 'none', id: null };
-  };
+  // const getId = (url) => {
+  //   const id = url.split('/').pop() ?? null;
+  //   return id;
+  // };
+
+  // const getDetails = async (url) => {
+  //   if (url) {
+  //     const res = await axios.get(url);
+  //     return { name: res.data.name, id: getId(url) };
+  //   }
+  //   return { name: 'none', id: null };
+  // };
 
   const getHouse = async () => {
     setIsLoading(true);
     try {
-      const response = await axios.get(`https://anapioficeandfire.com/api/houses/${params.id}`);
-      const houseDetails = response.data;
+      let houseDetails = houses.find(
+        (house) => house.url === `https://anapioficeandfire.com/api/houses/${params.id}`,
+      );
+      if (!houseDetails) {
+        // eslint-disable-next-line no-console
+        console.log('we fetch data from api');
+        const response = await axios.get(`https://anapioficeandfire.com/api/houses/${params.id}`);
+        houseDetails = response.data;
+      }
+
       houseDetails.founderDetails = await getDetails(houseDetails.founderDetails);
       setHouse(houseDetails);
     } catch (error) {

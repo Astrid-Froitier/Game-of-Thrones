@@ -3,23 +3,25 @@ import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
+import { inflateCharacterData } from '../utils/functions';
+
 function CharacterDesc() {
   const params = useParams();
   const [isLoading, setIsLoading] = useState(false);
   const [character, setCharacter] = useState({});
 
-  const getId = (url) => {
-    const id = url.split('/').pop() ?? null;
-    return id;
-  };
+  // const getId = (url) => {
+  //   const id = url.split('/').pop() ?? null;
+  //   return id;
+  // };
 
-  const getDetails = async (url) => {
-    if (url) {
-      const res = await axios.get(url);
-      return { name: res.data.name, id: getId(url) };
-    }
-    return { name: 'none', id: null };
-  };
+  // const getDetails = async (url) => {
+  //   if (url) {
+  //     const res = await axios.get(url);
+  //     return { name: res.data.name, id: getId(url) };
+  //   }
+  //   return { name: 'none', id: null };
+  // };
 
   // // display spouse's name
   // const getSpouse = async (character) => {
@@ -63,6 +65,14 @@ function CharacterDesc() {
   //   return inflatedMother;
   // };
 
+  // const inflateData = async (character) => {
+  //   const spouse = await getDetails(character.spouse);
+  //   const father = await getDetails(character.father);
+  //   const mother = await getDetails(character.mother);
+  //   const house = await getDetails(character.allegiances[0]);
+  //   return { ...character, spouse, father, mother, house };
+  // };
+
   const getCharacter = async () => {
     setIsLoading(true);
     try {
@@ -72,12 +82,9 @@ function CharacterDesc() {
       // const mother = await inflateMother(response.data);
       const characterDetail = response.data;
       // const house = await getHouse(characterDetail);
-      characterDetail.spouseDetail = await getDetails(characterDetail.spouse);
-      characterDetail.fatherDetail = await getDetails(characterDetail.father);
-      characterDetail.motherDetail = await getDetails(characterDetail.mother);
-      characterDetail.houseDetail = await getDetails(characterDetail.allegiances[0]);
+      const inflatedCharacter = await inflateCharacterData(characterDetail);
 
-      setCharacter({ ...characterDetail });
+      setCharacter({ ...inflatedCharacter });
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);

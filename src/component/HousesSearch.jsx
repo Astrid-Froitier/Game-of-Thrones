@@ -11,8 +11,6 @@ function HousesSearch({ search, handleSearch }) {
         value={search}
         onChange={handleSearch}
       />
-      {/* eslint-disable-next-line no-console */}
-      {console.log(handleSearch)}
     </div>
   );
 }

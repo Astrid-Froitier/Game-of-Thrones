@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 
+import HouseContext from '../context/Housecontext';
 import HouseCard from './HouseCard';
 import HousesSearch from './HousesSearch';
 
 function HousesList() {
-  const [houses, setHouses] = useState([]);
+  // const [houses, setHouses] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
-  const [page, setPage] = useState(1);
+  // const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
+
+  const { houses, setHouses } = useContext(HouseContext);
 
   const handleSearch = (e) => {
     setSearch(e.target.value);
@@ -41,26 +44,37 @@ function HousesList() {
     return inflatedCharacters;
   };
 
-  const getHouses = async () => {
-    setIsLoading(true);
+  const getHouses = async (houses, page) => {
+    // eslint-disable-next-line no-console
+    console.log('page', page);
+    let updatedHouses = houses;
     try {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/houses?pageSize=500&page=${page}`,
+        `https://anapioficeandfire.com/api/houses?pageSize=50&page=${page}`,
       );
       const inflatedFounder = await inflateCharacters(response.data);
-      const inflatedLord = await inflateCharacters(response.data);
-      setHouses([...houses, ...inflatedLord, ...inflatedFounder]);
+      // eslint-disable-next-line no-console
+      // console.log('inflatedFounder', inflatedFounder);
+      if (inflatedFounder.length > 0) {
+        updatedHouses = [...houses, ...inflatedFounder];
+        // setHouses([...houses, ...inflatedFounder]);
+        await getHouses(updatedHouses, page + 1);
+      } else {
+        setIsLoading(false);
+        setHouses(updatedHouses);
+        return;
+      }
     } catch (error) {
       // eslint-disable-next-line no-console
       console.log(error);
     }
-    setPage(page + 1);
-    setIsLoading(false);
   };
 
   useEffect(() => {
-    if (page === 1) {
-      getHouses();
+    if (houses.length === 0) {
+      setIsLoading(true);
+
+      getHouses([], 1);
     }
   }, []);
 
