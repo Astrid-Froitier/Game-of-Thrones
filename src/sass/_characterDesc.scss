@@ -2,15 +2,51 @@
   padding: 1.5rem;
   height: 100vh;
   background-image: url('../../public/assets/wallpaper.jpeg');
-  background-size: cover;
   color: #fff;
   &__title {
+    display: flex;
+    justify-content: center;
     font-family: 'mainPolice';
+    margin: 0;
   }
   &__details {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    &__actor {
+      display: flex;
+      gap: 10px;
+    }
+    &__titles {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      &__name {
+        margin: 0;
+      }
+    }
+    &__alias {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      &__all {
+        margin: 0;
+      }
+    }
+    &__season {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      &__number {
+        margin: 0;
+      }
+    }
     &__link {
       &__character {
         text-decoration: none;
+        color: #fff;
       }
     }
   }

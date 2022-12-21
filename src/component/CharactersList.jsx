@@ -61,12 +61,13 @@ function CharactersList() {
       <div className="charactersList__map">
         {charactersAsc &&
           charactersAsc
-            .filter((character) => character.name !== '')
-            .map((character) => {
-              const id = character.url.split('/').pop() ?? null;
+            .filter((characterAsc) => characterAsc.name !== '')
+            .filter((characterAsc) => characterAsc.name.toLowerCase().startsWith(search))
+            .map((characterAsc) => {
+              const id = characterAsc.url.split('/').pop() ?? null;
               return (
-                <div className="charactersList__map__details" key={character.url}>
-                  <CharacterCard character={{ ...character, id }} />
+                <div className="charactersList__map__details" key={characterAsc.url}>
+                  <CharacterCard character={{ ...characterAsc, id }} search={search} />
                 </div>
               );
             })}

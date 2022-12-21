@@ -97,18 +97,40 @@ function CharacterDesc() {
     <div className="characterDesc">
       <h1 className="characterDesc__title">{character.name}</h1>
       <div className="characterDesc__details">
-        <p>{character.playedBy}</p>
-        <p>{character.gender}</p>
+        <div className="characterDesc__details__actor">
+          <p>{character.playedBy}</p>
+          <p>{character.gender}</p>
+        </div>
         <p>{character.culture}</p>
-        <p>title : {character.titles}</p>
-        <p>alias : {character.aliases}</p>
-        <p>
+        <p className="characterDesc__details__titles">
+          title :
+          {character.titles &&
+            character.titles.map((alias, index) => (
+              <p className="characterDesc__details__titles__name" key={index}>
+                {alias}
+              </p>
+            ))}
+        </p>
+        <p className="characterDesc__details__alias">
+          alias :
+          {character.aliases &&
+            character.aliases.map((alias, index) => (
+              <p className="characterDesc__details__alias__all" key={index}>
+                {alias}
+              </p>
+            ))}
+        </p>
+        <p className="characterDesc__details__season">
           season :
           {character.tvSeries &&
-            character.tvSeries.map((alias, index) => <p key={index}>{alias}</p>)}
+            character.tvSeries.map((alias, index) => (
+              <p className="characterDesc__details__season__number" key={index}>
+                {alias}
+              </p>
+            ))}
         </p>
         <p>born : {character.born}</p>
-        <p>died : {character.died}</p>
+        <p>died : {character.died ? character.died : 'It does not want'}</p>
         <p className="characterDesc__details__link">
           father :
           {character.fatherDetail?.id ? (

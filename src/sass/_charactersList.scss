@@ -1,9 +1,9 @@
 .charactersList {
   font-family: 'mainPolice';
-  background: url('../../public/assets/wallpaper.jpeg');
+  background-image: url('../../public/assets/wallpaper.jpeg');
   color: #fff;
-
   &__title {
+    margin: 0;
     display: flex;
     justify-content: center;
     padding: 10rem;

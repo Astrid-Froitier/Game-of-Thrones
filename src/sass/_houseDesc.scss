@@ -1,1 +1,19 @@
-
+.houseDesc {
+  padding: 1.5rem;
+  background-image: url('../../public/assets/wallpaper.jpeg');
+  height: 100vh;
+  color: #fff;
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: 'mainPolice';
+  }
+  &__details {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

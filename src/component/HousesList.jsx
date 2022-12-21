@@ -14,8 +14,6 @@ function HousesList() {
     setSearch(e.target.value);
   };
 
-  const houseAsc = houses.sort();
-
   const getFounder = async (house) => {
     if (house.founder !== null) {
       const foundedBy = await axios.get(house.founder);
@@ -47,7 +45,7 @@ function HousesList() {
     setIsLoading(true);
     try {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/houses?pageSize=100&page${page}`,
+        `https://anapioficeandfire.com/api/houses?pageSize=500&page=${page}`,
       );
       const inflatedFounder = await inflateCharacters(response.data);
       const inflatedLord = await inflateCharacters(response.data);
@@ -75,19 +73,24 @@ function HousesList() {
       <h1 className="housesList__title">All houses</h1>
       <HousesSearch house={houses} search={search} handleSearch={handleSearch} />
       <div className="housesList__map">
-        {houseAsc &&
-          houseAsc
-            .filter((house) => house.currentLord !== undefined)
+        {houses &&
+          houses
+            // .filter((house) => house.founder !== '')
+            .filter((house) => house.name.toLowerCase().includes(search))
             .map((house, index) => {
               const id = house.url.split('/').pop() ?? null;
               return (
                 <div className="housesList__map__details" key={index}>
-                  {<HouseCard house={{ ...house, id }} />}
+                  {<HouseCard house={{ ...house, id }} search={search} />}
                 </div>
               );
             })}
       </div>
-      <button onClick={() => getHouses()}>See more</button>
+      <div className="housesList__button">
+        <button className="housesList__button__css" type="submit" onClick={() => getHouses()}>
+          See more
+        </button>
+      </div>
     </div>
   );
 }
