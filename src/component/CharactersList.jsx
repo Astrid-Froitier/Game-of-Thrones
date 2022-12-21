@@ -6,6 +6,7 @@ import CharactersSearch from './CharactersSearch';
 
 function CharactersList() {
   const [characters, setCharacters] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
   const [page, setPage] = useState(1);
   const [search, setSearch] = useState('');
 
@@ -34,9 +35,10 @@ function CharactersList() {
   };
 
   const getCharacters = async () => {
+    setIsLoading(true);
     try {
       const response = await axios.get(
-        `https://anapioficeandfire.com/api/characters?pageSize=50&page=${page}`,
+        `https://anapioficeandfire.com/api/characters?pageSize=200&page=${page}`,
       );
       // const characters = response.data;
       const inflatedCharacters = await infalteHouse(response.data);
@@ -46,6 +48,7 @@ function CharactersList() {
       console.log(error);
     }
     setPage(page + 1);
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -53,6 +56,10 @@ function CharactersList() {
       getCharacters();
     }
   }, []);
+
+  if (isLoading || !characters) {
+    return <div>Is loading</div>;
+  }
 
   return (
     <div className="charactersList">
@@ -62,7 +69,7 @@ function CharactersList() {
         {charactersAsc &&
           charactersAsc
             .filter((characterAsc) => characterAsc.name !== '')
-            .filter((characterAsc) => characterAsc.name.toLowerCase().startsWith(search))
+            .filter((characterAsc) => characterAsc.name.toLowerCase().includes(search))
             .map((characterAsc) => {
               const id = characterAsc.url.split('/').pop() ?? null;
               return (
@@ -72,7 +79,11 @@ function CharactersList() {
               );
             })}
       </div>
-      <button onClick={() => getCharacters()}>See more</button>
+      <div className="housesList__button">
+        <button className="housesList__button__css" onClick={() => getCharacters()}>
+          See more
+        </button>
+      </div>
     </div>
   );
 }

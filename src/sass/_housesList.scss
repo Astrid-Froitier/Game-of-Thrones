@@ -1,7 +1,7 @@
 .housesList {
   background: url('../../public/assets/wallpaper.jpeg');
   background-size: contain;
-  // background-repeat: no-repeat;
+  min-height: 100vh;
   font-family: 'mainPolice';
 
   &__title {
